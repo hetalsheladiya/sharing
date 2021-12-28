@@ -70,4 +70,64 @@
          
     </div>
 </body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sharing using FB.ui() Dialogs</h1>
+
+    <p>Below are some simple examples of how to use UI dialogs in a web page.</p>
+
+    <h3>Sharing Links</h3>
+
+    <div id="shareBtn" class="btn btn-success clearfix">Share Dialog</div>
+
+    <p>The Share Dialog enables you to share links to a person's profile without them having to use Facebook Login. <a href="https://developers.facebook.com/docs/sharing/reference/share-dialog">Read our Share Dialog guide</a> to learn more about how it works.</p>
+
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+            appId            : '335895161302807',
+            autoLogAppEvents : true,
+            xfbml            : true,
+            version          : 'v13.0'
+            });
+        };
+        document.getElementById('shareBtn').onclick = function() {
+            FB.api(
+                'me/feed/',
+                'POST',
+                {
+                    message: 'This is a GIF',
+                    link: 'https://rocksim.com/apis/1qpsOl0vh?img=LVgifs-7.gif'
+                },
+                function(response) {
+                    console.log(response);
+                }
+            );
+        // FB.ui({
+        //     app_id: 335895161302807,
+        //     display: 'popup',
+        //     method: 'share',
+        //     href: 'https://rocksimbucket.s3.us-east-2.amazonaws.com/shareGIF/LVgifs-1.gif',
+        //     redirect_uri: 'https://rocksim.com/apis/0--WveB6C/?img=LVgifs-1.gif',
+        //     hashtag: '',
+
+        // }, function(response){
+        //     console.log("------------", response);
+        //     if (response && !response.error_message) {
+        //     alert('Posting completed.');
+        //     } else {
+        //     alert('Error while posting.');
+        //     }
+        // });
+    }
+</script>
+</body>
 </html>
