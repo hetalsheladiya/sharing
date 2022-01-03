@@ -1,0 +1,78 @@
+!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sharing using FB.ui() Dialogs</h1>
+
+    <p>Below are some simple examples of how to use UI dialogs in a web page.</p>
+
+    <h3>Sharing Links</h3>
+
+    <div id="shareBtn" class="btn btn-success clearfix">Share Dialog</div>
+
+    <p>The Share Dialog enables you to share links to a person's profile without them having to use Facebook Login. <a href="https://developers.facebook.com/docs/sharing/reference/share-dialog">Read our Share Dialog guide</a> to learn more about how it works.</p>
+
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+            appId            : '335895161302807',
+            autoLogAppEvents : true,
+            xfbml            : true,
+            version          : 'v13.0'
+            });
+        };
+        document.getElementById('shareBtn').onclick = function() {
+
+            FB.ui({
+                method: 'share_open_graph',
+                action_type: 'og.shares',
+                action_properties: JSON.stringify({
+                    object : {
+                    'og:url': 'http://astahdziq.in/', // your url to share
+                    'og:title': 'Here my custom title',
+                    'og:description': 'here custom description',
+                    'og:image': 'http://example.com/link/to/your/image.jpg'
+                    }
+                })
+                },
+                // callback
+                function(response) {
+                if (response && !response.error_message) {
+                    // then get post content
+                    alert('successfully posted. Status id : '+response.post_id);
+                } else {
+                    alert('Something went error.');
+                }
+            });
+        // FB.ui({
+        //     app_id: 335895161302807,
+        //     display: 'popup',
+        //     method: 'share',
+        //     href: 'https://rocksimbucket.s3.us-east-2.amazonaws.com/shareGIF/LVgifs-1.gif',
+        //     redirect_uri: 'https://rocksim.com/apis/0--WveB6C/?img=LVgifs-1.gif',
+        //     hashtag: '',
+
+        // }, function(response){
+        //     console.log("------------", response);
+        //     if (response && !response.error_message) {
+        //     alert('Posting completed.');
+        //     } else {
+        //     alert('Error while posting.');
+        //     }
+        // });
+    }
+</script>
+</body>
+</html>
+
+'og:video': 'https://rocksimbucket.s3.us-east-2.amazonaws.com/shareVideos/sample.mp4',
+'og:video:type':'video/mp4',
+'og:video:width': '700',
+'og:video:height':'700',
+'og:video:url':'https://rocksimbucket.s3.us-east-2.amazonaws.com/shareVideos/sample.mp4' -->

@@ -4,130 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .container {
-        border: 1px solid rgb(73, 72, 72);
-        border-radius: 10px;
-        margin: auto;
-        padding: 10px;
-        text-align: center;
-        }
-        
-        h1 {
-        margin-top: 10px;
-        }
-        
-        input[type="text"] {
-        padding: 10px;
-        border-radius: 5px;
-        margin: 10px;
-        font-family: "Times New Roman", Times, serif;
-        font-size: larger;
-        }
-        
-        button {
-        border-radius: 5px;
-        padding: 10px;
-        color: #fff;
-        background-color: #167deb;
-        border-color: #0062cc;
-        font-weight: bolder;
-        cursor: pointer;
-        }
-        
-        button:hover {
-        text-decoration: none;
-        background-color: #0069d9;
-        border-color: #0062cc;
-        }
-        
-        .g-recaptcha {
-        margin-left: 513px;
-        }
-    </style>
-    <script src="https://www.google.com/recaptcha/api.js" async defer>
-    </script>
-</head>
-<body>
-    <div class="container">
-        <h1>Google recaptcha</h1>
- 
-        <!-- HTML Form -->
-        <form action="/submit" method="post">
-            <input type="text" name="name" id="name"
-                   placeholder="Enter Name" required>
-            <br>
- 
-            <!-- div to show reCAPTCHA -->
-            <div class="g-recaptcha"
-                 data-sitekey="6LfV5qsaAAAAAI9ntMj1H4wlVt2AlRjJ8A5HAAKN">
-            </div>
-            <br>
-             
-            <button type="submit">Submit</button>
-        </form>
-         
-    </div>
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+    <meta property="fb:app_id" content="406655189415060">
+    <meta property="og:site_name" content="GIPHY">
+    <meta property="og:url" content="https://media4.giphy.com/media/M0rvOs85cocbjKrrHv/giphy.gif?cid=790b76113773deed67def7721277ff869343799be6e82801&amp;rid=giphy.gif&amp;ct=g">
+    <meta property="og:title" content="Winter Merry Christmass GIF by Playbear520_TW - Find &amp; Share on GIPHY">
+    <meta property="og:description" content="Discover &amp; share this Playbear520_TW GIF with everyone you know. GIPHY is how you search, share, discover, and create GIFs.">
+
+    
+
+    
+    <meta property="og:type" content="video.other">
+    <meta property="og:image" content="https://media4.giphy.com/media/M0rvOs85cocbjKrrHv/giphy.gif?cid=790b76113773deed67def7721277ff869343799be6e82801&amp;rid=giphy.gif&amp;ct=g">
+    <meta property="og:image:type" content="image/gif">
+    <meta property="og:image:width" content="480">
+    <meta property="og:image:height" content="460">
+    
+    
+    <meta property="og:video" content="https://media4.giphy.com/media/M0rvOs85cocbjKrrHv/giphy.mp4?cid=790b76113773deed67def7721277ff869343799be6e82801&rid=giphy.mp4&ct=g">
+    <meta property="og:video:url" content="https://media4.giphy.com/media/M0rvOs85cocbjKrrHv/giphy.mp4?cid=790b76113773deed67def7721277ff869343799be6e82801&rid=giphy.mp4&ct=g">
+    <meta property="og:video:secure_url" content="https://media4.giphy.com/media/M0rvOs85cocbjKrrHv/giphy.mp4?cid=790b76113773deed67def7721277ff869343799be6e82801&rid=giphy.mp4&ct=g">
+    <meta property="og:video:type" content="video/mp4">
+    <meta property="og:video:width" content="480">
+    <meta property="og:video:height" content="460">
     <title>Document</title>
 </head>
 <body>
-    <h1>Sharing using FB.ui() Dialogs</h1>
-
-    <p>Below are some simple examples of how to use UI dialogs in a web page.</p>
-
-    <h3>Sharing Links</h3>
-
-    <div id="shareBtn" class="btn btn-success clearfix">Share Dialog</div>
-
-    <p>The Share Dialog enables you to share links to a person's profile without them having to use Facebook Login. <a href="https://developers.facebook.com/docs/sharing/reference/share-dialog">Read our Share Dialog guide</a> to learn more about how it works.</p>
-
+    <h1>Face book share post gif</h1>
+        <a target="_blank">
+            Share on Facebook3
+        </a>
+        <img src="https://media4.giphy.com/media/M0rvOs85cocbjKrrHv/giphy.gif?cid=790b76113773deed67def7721277ff869343799be6e82801&amp;rid=giphy.gif&amp;ct=g" width="206.08" height="256" 
+                alt="Chibi Cat Mochi Cat Sticker - Chibi Cat Mochi Cat White Cat Stickers" 
+                style="max-width: 280px; background-color: unset; margin: 12px 36.96px;">
+        <h2>Share post</h2>
     <script>
-        window.fbAsyncInit = function() {
-            // FB.init({
-            // appId            : '335895161302807',
-            // autoLogAppEvents : true,
-            // xfbml            : true,
-            // version          : 'v13.0'
-            // });
-        };
-        document.getElementById('shareBtn').onclick = function() {
-            FB.api(
-                'me/feed/',
-                'POST',
-                {
-                    message: 'This is a GIF',
-                    link: 'https://rocksim.com/apis/1qpsOl0vh?img=LVgifs-7.gif'
-                },
-                function(response) {
-                    console.log(response);
-                }
-            );
-        // FB.ui({
-        //     app_id: 335895161302807,
-        //     display: 'popup',
-        //     method: 'share',
-        //     href: 'https://rocksimbucket.s3.us-east-2.amazonaws.com/shareGIF/LVgifs-1.gif',
-        //     redirect_uri: 'https://rocksim.com/apis/0--WveB6C/?img=LVgifs-1.gif',
-        //     hashtag: '',
-
-        // }, function(response){
-        //     console.log("------------", response);
-        //     if (response && !response.error_message) {
-        //     alert('Posting completed.');
-        //     } else {
-        //     alert('Error while posting.');
-        //     }
-        // });
-    }
-</script>
+        document.querySelector("a").href="https://www.facebook.com/sharer/sharer.php?u="+document.location.href;        
+    </script>
 </body>
 </html>
